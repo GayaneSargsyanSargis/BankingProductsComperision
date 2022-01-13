@@ -1,0 +1,393 @@
+﻿
+@{
+    ViewBag.Title = "Քարտեր";
+}
+
+<div class="container-fluid ">
+    <div class="container result-container bodypart bg-light">
+        <div class="row p-4">
+            <div class="col-md-8 offset-md-2 text-center p-2">
+                <h4>Գտնվել են հետևյալ արդյունքները</h4>
+            </div>
+            <div class="col-md-1 offset-md-1">
+                <button id="result" type="button" class="btn btn-link delete ml-3">
+                    <img src="~/Content/images/x-button.png" alt="delete">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2 bg-light pt-3">
+        <div class="row">
+            <div class="col-md-2">
+                <form action="">
+                    <h5>Ֆիլտրեր</h5>
+                    <div class="row mt-3">
+                        <div class="col-md-12 bg-success p-3 producttype">
+                            <h6>Քարտի տեսակ</h6>
+                            <div>
+                                <div class="d-flex pt-2 justify-content-md-between">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected value="1">MasterCard</option>
+                                        <option value="2">Viza</option>
+                                        <option value="3">Arca</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-12 bg-success p-3 producttype">
+                            <h6>Արժույթ</h6>
+                            <div>
+                                <div class="d-flex pt-2 justify-content-md-between">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected value="1">AMD</option>
+                                        <option value="2">USD</option>
+                                        <option value="3">EUR</option>
+                                        <option value="3">RUR</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-12 bg-success p-3 producttype">
+                            <h6>Ժամկետ</h6>
+                            <div>
+                                <div class="d-flex pt-2 justify-content-md-between">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected value="1">1 տարի</option>
+                                        <option value="2">2 տարի</option>
+                                        <option value="3">3 տարի</option>
+                                        <option value="3">4 տարի</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-md-12 bg-success p-3 producttype">
+                            <h6>CashBack առկայություն</h6>
+                            <div>
+                                <div class="d-flex pt-2 justify-content-md-between">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected value="1">Այո</option>
+                                        <option value="2">Ոչ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-9 offset-md-1 resultInfo">
+                <div class="row text-center ">
+                    <h5>Գտնված արդյունքներ</h5>
+                    <div class="row bank-result row-result">
+                        <div class="col-md-10 p-2 ">
+                            <div class="row border  border-secondary">
+                                <div class="col-md-2 p-0 bg-secondary">
+                                    <div class="row result">
+                                        <div class="col-md-11 bankName">AEB1</div>
+                                    </div>
+                                    <div class="row result">
+                                        <div class="col-md-11"><p>MasterCard</p></div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-md-11 ">
+                                            <ul class="ratings p-0 justify-content-center">
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11 ">
+                                            <div><p>Գումարի չափ</p></div>
+                                            <span>100000 ՀՀդրամ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11 ">
+                                            <div><p>Ժամկետ</p></div>
+                                            <span>24 ամիս</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11">
+                                            <div><p>Տոկոսադրույք</p></div>
+                                            <span>15%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11">
+                                            <div><p>Սպասարկման վճար</p></div>
+                                            <span>1000 ՀՀդրամ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result ">
+                                        <div class="col-md-11">
+                                            <div><p>Կանխավճար</p></div>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 ">
+                            <div class="row p-1">
+                                <div class="col-md-12 d-flex justify-content-center ">
+                                    <a href="">
+                                        <button class="right-side-firstbtn mt-1">Գնալ բանկի էջ</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row mt-3 p-1">
+                                <div class="col-md-12 d-flex  justify-content-center">
+                                    <button class="plus ride-side-button align-self-md-center ">+</button>
+                                    <button class="compairbtn ride-side-button ">Համեմատել</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bank-result row-result">
+                        <div class="col-md-10 p-2 ">
+                            <div class="  row border  border-secondary">
+                                <div class="col-md-2 p-0 bg-secondary">
+                                    <div class="row result">
+                                        <div class="col-md-11 bankName">AEB2</div>
+                                    </div>
+                                    <div class="row result">
+                                        <div class="col-md-11"><p>MasterCard</p></div>
+                                    </div>
+                                    <div class="row  ">
+                                        <div class="col-md-11 ">
+                                            <ul class="ratings p-0 justify-content-center">
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11">
+                                            <div><p>Գումարի չափ</p></div>
+                                            <span>100000 ՀՀդրամ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11 ">
+                                            <div><p>Ժամկետ</p></div>
+                                            <span>12 ամիս</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11">
+                                            <div><p>Տոկոսադրույք</p></div>
+                                            <span>17%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11">
+                                            <div>
+                                                <p>Սպասարկման վճար</p>
+                                            </div>
+                                            <span>1000 ՀՀդրամ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result ">
+                                        <div class="col-md-11">
+                                            <div><p>Կանխավճար</p></div>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 ">
+                            <div class="row p-1">
+                                <div class="col-md-12 d-flex justify-content-center ">
+                                    <a href="">
+                                        <button class="right-side-firstbtn mt-1">Գնալ բանկի էջ</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row mt-3 p-1">
+                                <div class="col-md-12 d-flex  justify-content-center">
+                                    <button class="plus ride-side-button align-self-md-center ">+</button>
+                                    <button class="compairbtn ride-side-button ">Համեմատել</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bank-result row-result">
+                        <div class="col-md-10 p-2 ">
+                            <div class="row border  border-secondary">
+                                <div class="col-md-2 p-0 bg-secondary">
+                                    <div class="row result">
+                                        <div class="col-md-11 bankName">AEB3</div>
+                                    </div>
+                                    <div class="row result">
+                                        <div class="col-md-11"><p>MasterCard</p></div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-md-11 ">
+                                            <ul class="ratings p-0 justify-content-center">
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                                <li class="star"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11 ">
+                                            <div><p>Գումարի չափ</p></div>
+                                            <span>30000000 ՀՀդրամ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11 ">
+                                            <div><p>Ժամկետ<p> </div>
+                                            <span>36 ամիս</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11">
+                                            <div><p>Տոկոսադրույք</p></div>
+                                            <span>24%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result">
+                                        <div class="col-md-11">
+                                            <div><p>Սպասարկման վճար</p></div>
+                                            <span>5000 ՀՀդրամ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 p-0 bg-light">
+                                    <div class="row result ">
+                                        <div class="col-md-11">
+                                            <div><p>Կանխավճար</p></div>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 ">
+                            <div class="row p-1">
+                                <div class="col-md-12 d-flex justify-content-center ">
+                                    <a href="">
+                                        <button class="right-side-firstbtn mt-1">Գնալ բանկի էջ</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row mt-3 p-1">
+                                <div class="col-md-12 d-flex  justify-content-center">
+                                    <button class="plus ride-side-button align-self-md-center ">+</button>
+                                    <button class="compairbtn ride-side-button ">Համեմատել</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-md-12 ">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-end align-items-end ">
+                                    <li class="page-item  ">
+                                        <a class="page-link text-muted" href="#" tabindex="-1" aria-disabled="false">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link text-muted" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="compare-part">
+        <div class="container mt-1">
+            <div class="row p-2 bg-success align-items-center ">
+                <div class="col-md-3 p-4">
+                    <h5>Ձեր ընտրված վարկերը</h5>
+                </div>
+                <div class="col-md-9 compare-result">
+                    <div class="row">
+
+                        <div class="col-md-2 align-self-md-center">
+                            <div class="row ml-1">
+                                <button id="comparebtn" type="button" class="btn btn-danger btn-lg ">
+                                    Համեմեմատել
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tableInfo">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Բանկ</th>
+                <th>Տեսակ</th>
+                <th>Գումարի չափ</th>
+                <th>Ժամկետ</th>
+                <th>Տոկոսադրույք</th>
+                <th>Սպասարկման վճար</th>
+                <th>Կանխավճար</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="info-column">
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-danger" id="close">Close</button>
+</div>

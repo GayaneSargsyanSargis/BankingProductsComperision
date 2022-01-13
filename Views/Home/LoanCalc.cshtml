@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Վարկային հաշվիչ";
+}
+
+@Scripts.Render("~/Scripts/javascript/CalcScript.js")
+
+<div class="container-fluid ">
+    <div class="container p-3">
+
+        <div class="row ">
+            <div class="col-md-4 offset-md-4 text-center">
+                <h3>Վարկային հաշվիչ</h3><hr>
+                <form class="justify-content-center">
+                    <div class="mb-3">
+                        <select class="form-select " aria-label="Default select example" id="inputType" required>
+                            <option selected disabled>Մարման տեսակ</option>
+                            <option value="1">Հավասարաչափ</option>
+                        </select>
+                        <div id="loanTypeHelp" class="form-text text-start"></div>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select " aria-label="Default select example" id="inputCurrencyType" required>
+                            <option selected disabled>Վարկի արժույթ</option>
+                            <option value="1">ՀՀ դրամ</option>
+                            <option value="2">ԱՄՆ դոլար</option>
+                            <option value="3">Ռուբլի</option>
+                        </select>
+                        <div id="loanCurrencyTypeHelp" class="form-text text-start"></div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" placeholder="Վարկի գումար" min="1000" class="form-control" id="inputAmount" required>
+                        <div id="amountHelp" class="form-text text-start"></div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" placeholder="Տարեկան տոկոսադրույք" min="1" class="form-control" id="inputPercent" required>
+                        <div id="percentHelp" class="form-text text-start"></div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" placeholder="Վարկի ժամկետ ամիսներով" min="1" class="form-control" id="inputPeriod" required>
+                        <div id="periodHelp" class="form-text text-start"></div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class=" col-md-4 d-grid gap-2 col-6 mx-auto">
+                            <button type="button" class="btn btn-success submitButton rounded-pill"><b>Հաշվել</b></button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 offset-md-4">
+                <div id=" resultText" class="result">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

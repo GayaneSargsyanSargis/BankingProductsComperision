@@ -6,27 +6,19 @@ using System.Web.Mvc;
 
 namespace BankingProductsComperision.Controllers
 {
-    public class HomeController : Controller
+    public class AuthController : Controller
     {
+        // GET: Auth
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Login()
         {
             return View();
         }
-
-        public ActionResult Contact()
-        {
-            return View();
-        }
-        public ActionResult LoanCalc()
-        {
-            return View();
-        }
-        public ActionResult DepositCalc()
+        public ActionResult SignUp()
         {
             return View();
         }

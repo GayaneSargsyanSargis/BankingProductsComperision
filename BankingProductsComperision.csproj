@@ -133,7 +133,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\CardController.cs" />
+    <Compile Include="Controllers\DepositController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoanController.cs" />
+    <Compile Include="Controllers\MortgageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -144,6 +149,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\happy-families.jpg" />
+    <Content Include="Content\style\landing.css" />
+    <Content Include="Content\style\LogInStyle.css" />
+    <Content Include="Content\style\SignUpStyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -151,6 +160,12 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\javascript\CalcScript.js" />
+    <Content Include="Scripts\javascript\DepositCalcScript.js" />
+    <Content Include="Scripts\javascript\Land.js" />
+    <Content Include="Scripts\javascript\LogIn.js" />
+    <Content Include="Scripts\javascript\script.js" />
+    <Content Include="Scripts\javascript\SignUp.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -161,9 +176,88 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Tamplates\242117414_186258693594262_2308236470375189109_n.jpg" />
-    <Content Include="Tamplates\242117951_192931509575920_6161071655705385667_n.jpg" />
-    <Content Include="Tamplates\BazaDiagramFinal.png" />
+    <Content Include="Tamplates\hin\242117414_186258693594262_2308236470375189109_n.jpg" />
+    <Content Include="Tamplates\hin\242117951_192931509575920_6161071655705385667_n.jpg" />
+    <Content Include="Tamplates\hin\BazaDiagramFinal.png" />
+    <Content Include="Tamplates\nor\BankProduct\Card.html" />
+    <Content Include="Tamplates\nor\BankProduct\Deposit.html" />
+    <Content Include="Tamplates\nor\BankProduct\DepositCalc.html" />
+    <Content Include="Tamplates\nor\BankProduct\exemple.html" />
+    <Content Include="Content\images\acba-bank.png" />
+    <Content Include="Content\images\aeb.svg" />
+    <Content Include="Content\images\ameria-bank.png" />
+    <Content Include="Content\images\ardshin-bank.png" />
+    <Content Include="Content\images\facebook.png" />
+    <Content Include="Content\images\ineco-bank.svg" />
+    <Content Include="Content\images\linkedin.png" />
+    <Content Include="Content\images\x-button.png" />
+    <Content Include="Tamplates\nor\BankProduct\javascript\CalcScript.js" />
+    <Content Include="Tamplates\nor\BankProduct\javascript\DepositCalcScript.js" />
+    <Content Include="Tamplates\nor\BankProduct\javascript\Land.js" />
+    <Content Include="Tamplates\nor\BankProduct\javascript\script.js" />
+    <Content Include="Tamplates\nor\BankProduct\LoanCalc.html" />
+    <Content Include="Tamplates\nor\BankProduct\Mortgage.html" />
+    <Content Include="Content\style\MainStyle.css" />
+    <Content Include="Tamplates\nor\BankProduct\style\depositStyle.css" />
+    <Content Include="Tamplates\nor\BankProduct\style\landing.css" />
+    <Content Include="Tamplates\nor\BankProduct\style\mortgageStyle.css" />
+    <Content Include="Tamplates\nor\BuscetPage\buscetPage.html" />
+    <Content Include="Tamplates\nor\BuscetPage\styleBuscetPage.css" />
+    <Content Include="Tamplates\nor\Calculator\index.html" />
+    <Content Include="Tamplates\nor\Calculator\script.js" />
+    <Content Include="Tamplates\nor\Calculator\style.css" />
+    <Content Include="Tamplates\nor\compare\Compare.html" />
+    <Content Include="Tamplates\nor\compare\compareStyle.css" />
+    <Content Include="Tamplates\nor\compare\images\acba-bank.png" />
+    <Content Include="Tamplates\nor\compare\images\aeb.svg" />
+    <Content Include="Tamplates\nor\compare\images\ameria-bank.png" />
+    <Content Include="Tamplates\nor\compare\images\ardshin-bank.png" />
+    <Content Include="Tamplates\nor\compare\images\facebook.png" />
+    <Content Include="Tamplates\nor\compare\images\ineco-bank.svg" />
+    <Content Include="Tamplates\nor\compare\images\linkedin.png" />
+    <Content Include="Tamplates\nor\compare\images\x-button.png" />
+    <Content Include="Tamplates\nor\Landingnew\depositStyle.css" />
+    <Content Include="Tamplates\nor\Landingnew\images\acba-bank.png" />
+    <Content Include="Tamplates\nor\Landingnew\images\aeb.svg" />
+    <Content Include="Tamplates\nor\Landingnew\images\ameria-bank.png" />
+    <Content Include="Tamplates\nor\Landingnew\images\ardshin-bank.png" />
+    <Content Include="Tamplates\nor\Landingnew\images\facebook.png" />
+    <Content Include="Tamplates\nor\Landingnew\images\happy-families.jpg" />
+    <Content Include="Tamplates\nor\Landingnew\images\ineco-bank.svg" />
+    <Content Include="Tamplates\nor\Landingnew\images\linkedin.png" />
+    <Content Include="Tamplates\nor\Landingnew\images\x-button.png" />
+    <Content Include="Tamplates\nor\Landingnew\Land.js" />
+    <Content Include="Tamplates\nor\Landingnew\landing.css" />
+    <Content Include="Tamplates\nor\Landingnew\Landing.html" />
+    <Content Include="Tamplates\nor\landing\index.html" />
+    <Content Include="Tamplates\nor\landing\script.js" />
+    <Content Include="Tamplates\nor\landing\style.css" />
+    <Content Include="Tamplates\nor\login\images\1.jpg" />
+    <Content Include="Tamplates\nor\login\images\2.png" />
+    <Content Include="Tamplates\nor\login\images\acba-bank.png" />
+    <Content Include="Tamplates\nor\login\images\aeb.svg" />
+    <Content Include="Tamplates\nor\login\images\ameria-bank.png" />
+    <Content Include="Tamplates\nor\login\images\ardshin-bank.png" />
+    <Content Include="Tamplates\nor\login\images\facebook.png" />
+    <Content Include="Tamplates\nor\login\images\ineco-bank.svg" />
+    <Content Include="Tamplates\nor\login\images\linkedin.png" />
+    <Content Include="Tamplates\nor\login\images\x-button.png" />
+    <Content Include="Tamplates\nor\login\LogIn.html" />
+    <Content Include="Tamplates\nor\login\LogIn.js" />
+    <Content Include="Tamplates\nor\login\LogInStyle.css" />
+    <Content Include="Tamplates\nor\sign-up\images\1.jpg" />
+    <Content Include="Tamplates\nor\sign-up\images\2.png" />
+    <Content Include="Tamplates\nor\sign-up\images\acba-bank.png" />
+    <Content Include="Tamplates\nor\sign-up\images\aeb.svg" />
+    <Content Include="Tamplates\nor\sign-up\images\ameria-bank.png" />
+    <Content Include="Tamplates\nor\sign-up\images\ardshin-bank.png" />
+    <Content Include="Tamplates\nor\sign-up\images\facebook.png" />
+    <Content Include="Tamplates\nor\sign-up\images\ineco-bank.svg" />
+    <Content Include="Tamplates\nor\sign-up\images\linkedin.png" />
+    <Content Include="Tamplates\nor\sign-up\images\x-button.png" />
+    <Content Include="Tamplates\nor\sign-up\SignUp.html" />
+    <Content Include="Tamplates\nor\sign-up\SignUp.js" />
+    <Content Include="Tamplates\nor\sign-up\SignUpStyle.css" />
     <Content Include="Views\HtmlPage1.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -179,17 +273,24 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Tamplates\BascketPage-Gayane----Wireframe-cc-Premium.pdf" />
-    <Content Include="Tamplates\Database1.xlsx" />
-    <Content Include="Tamplates\LogInPage-Hasmik----Wireframe-cc-Premium.pdf" />
-    <Content Include="Tamplates\SignUpPage-Hasmik----Wireframe-cc-Premium.pdf" />
-    <Content Include="Tamplates\Unique-Project-Calculator---Wireframe-cc-Premium %281%29.pdf" />
-    <Content Include="Tamplates\Unique-Project-Home-Page---Wireframe-cc-Premium.pdf" />
+    <Content Include="Tamplates\hin\BascketPage-Gayane----Wireframe-cc-Premium.pdf" />
+    <Content Include="Tamplates\hin\Database1.xlsx" />
+    <Content Include="Tamplates\hin\LogInPage-Hasmik----Wireframe-cc-Premium.pdf" />
+    <Content Include="Tamplates\hin\SignUpPage-Hasmik----Wireframe-cc-Premium.pdf" />
+    <Content Include="Tamplates\hin\Unique-Project-Calculator---Wireframe-cc-Premium %281%29.pdf" />
+    <Content Include="Tamplates\hin\Unique-Project-Home-Page---Wireframe-cc-Premium.pdf" />
+    <Content Include="Views\Home\LoanCalc.cshtml" />
+    <Content Include="Views\Home\DepositCalc.cshtml" />
+    <Content Include="Views\Deposit\Index.cshtml" />
+    <Content Include="Views\Loan\Index.cshtml" />
+    <Content Include="Views\Mortgage\Index.cshtml" />
+    <Content Include="Views\Card\Index.cshtml" />
+    <Content Include="Views\Auth\Login.cshtml" />
+    <Content Include="Views\Auth\SignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Home\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -232,6 +333,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Target Name="CopyRoslynFiles" AfterTargets="AfterBuild" Condition="!$(Disable_CopyWebApplication) And '$(OutDir)' != '$(OutputPath)'">
+    <ItemGroup>
+      <RoslynFiles Include="$(CscToolPath)\*" />
+    </ItemGroup>
+    <MakeDir Directories="$(WebProjectOutputDir)\bin\roslyn" />
+    <Copy SourceFiles="@(RoslynFiles)" DestinationFolder="$(WebProjectOutputDir)\bin\roslyn" SkipUnchangedFiles="true" Retries="$(CopyRetryCount)" RetryDelayMilliseconds="$(CopyRetryDelayMilliseconds)" />
+  </Target>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
